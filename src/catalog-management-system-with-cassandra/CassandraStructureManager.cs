@@ -10,9 +10,11 @@ namespace catalog_management_system_with_cassandra
 
         private static void CreateKeyspace(string keyspace)
         {
-            string query = $"CREATE KEYSPACE" + keyspace + "WITH replication = {'class':'SimpleStrategy', 'replication_factor' :3};";
-            
             Session = Session ?? Connector.GetSession();
+
+            Session.DeleteKeyspaceIfExists(keyspace);
+
+            string query = $"CREATE KEYSPACE " + keyspace + " WITH replication = {'class':'SimpleStrategy', 'replication_factor' :3};";
 
             Session.Execute(query);
 
