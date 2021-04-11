@@ -2,5 +2,23 @@
 {
     public enum AttributesNames
     {
+        SELLERID,
+        PRODUCTID,
+        LISTINGID,
+        SKUID,
+        MRP,
+        SSP,
+        SLA,
+        TITLE,
+        BRAND,
+        MODELID,
+        KEYFEATURES,
+        PINCODESSERVED,
+        LENGTH,
+        BREADTH,
+        HEIGHT,
+        PUBLISHER,
+        CATEGORY,
+        STOCK
     }
 }

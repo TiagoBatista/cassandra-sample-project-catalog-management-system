@@ -6,12 +6,10 @@ namespace catalog_management_system_with_cassandra
 {
     public static class CassandraStructureManager
     {
-        public static ISession Session; //Public just to check info in Main
+        public static ISession Session => Connector.Session; //Public just to check info in Main
 
         private static void CreateKeyspace(string keyspace)
         {
-            Session = Session ?? Connector.GetSession();
-
             Session.DeleteKeyspaceIfExists(keyspace);
 
             string query = $"CREATE KEYSPACE " + keyspace + " WITH replication = {'class':'SimpleStrategy', 'replication_factor' :3};";
