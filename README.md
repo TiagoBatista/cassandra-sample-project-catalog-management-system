@@ -1,2 +1,2 @@
-# cassandra-sample-project-catalog-management-system
+# CassandraSampleProject - CatalogManagementSystem
 A cassandra sample project with a miniature catalog management system
